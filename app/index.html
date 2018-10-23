@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chatnizer</title>
+	</head>
+
+	<body>
+		<h1>Este vai ser o chatnizer</h1>
+
+		<button id="alert">Clique aqui para um alerta</button>
+
+
+		<script type="text/javascript" src="assets/js/main.js"></script>
+
+		<script type="text/javascript">
+			const remote = require('electron').remote;
+			const Menu = remote.Menu;
+			const MenuItem = remote.MenuItem;
+			let myMenu = new Menu();
+
+			myMenu.append(new MenuItem({ label: "Primeiro Item", click(){ console.log( ' Clicou no primeiro item do menu ' )}}));
+			myMenu.append(new MenuItem({ type: "separator"}));
+			myMenu.append(new MenuItem({ label: "Segundo Item", type: "checkbox", checked: true }));
+
+			window.addEventListener('contextmenu', (e) => {
+
+				// e.preventDefault();
+				myMenu.popup({});
+
+			}, false);
+
+		</script>
+
+	</body>
+</html>

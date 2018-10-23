@@ -1,0 +1,16 @@
+{
+  "name": "chatnizer_electron",
+  "version": "1.0.0",
+  "description": "Exemplo de projeto de Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "export": "Shell script for export in multiples S.O"
+  },
+  "author": "Felipe Oliveira",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^3.0.5"
+  }
+}
